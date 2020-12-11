@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Mars Information</title>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron text-center">
+            <h1 style="color: rgb(15, 15, 105);">Mission to Mars</h1>
+            <!-- <p>{{ mars.news_header }}</p> -->
+            <a class="btn btn-success btn-lg mt-5" href="/scrape" role="button">Scrape New Data</a>
+        </div>  <br>
+    </div>
+    <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 style="color: rgb(15, 15, 105);">Latest Mars News</h2>
+                <h5>{{ mars.news_header }}</h5>
+                <p>{{ mars.news_p }}</p><br>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <div class="box">
+                    <h3 style="color: rgb(15, 15, 105);">Featured Mars Image </h3>
+                    <img src="{{mars.ft_img}}" alt="Featured Image" width="110%">
+                </div>
+            </div>
+    <hr>
+            <div class="col-md-4 offset-1"><br>
+                <div class="card border-secondary p-2">
+                    <div class="card-header">
+                        <h4 style="color:rgb(15, 15, 105);">Current Weather on Mars</h4>
+                    </div>
+                    <p style="text-align: justify;">{{mars.last_tweet}}</p>
+    <hr>                
+                </div><br>
+                <div class="container" style="white-space: nowrap;">
+                    <div class="box"> <br>
+                        <h4 style="color: rgb(15, 15, 105);">Mars Facts</h4>
+                        {{mars.Html_table|safe}}
+    <hr>
+                    </div><br>
+                </div>
+            </div>
+        </div>
+    </div>
+<hr>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 style="color: rgb(18, 18, 112);" class="text-center">Mars Hemispheres</h2>
+            <hr>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <img class="card-img-top" src="{{mars.image0}}" alt="1st Hemisphere">
+                    <div class="card-body">
+                        <h4 class="text-center">{{mars.title0}}</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <img class="card-img-top" src="{{mars.image1}}" alt="1st Hemisphere">
+                    <div class="card-body">
+                        <h4 class="text-center">{{mars.title1}}</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <img class="card-img-top" src="{{mars.image2}}" alt="1st Hemisphere">
+                    <div class="card-body">
+                        <h4 class="text-center">{{mars.title2}}</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <img class="card-img-top" src="{{mars.image3}}" alt="1st Hemisphere">
+                    <div class="card-body">
+                        <h4 class="text-center">{{mars.title3}}</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

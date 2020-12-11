@@ -1,0 +1,12 @@
+
+.card-img-top{
+    box-shadow: 10px 15px 20px grey;
+}
+
+h1{
+    size: 25;
+}
+
+table{
+    border: solid 1px rgb(38, 16, 238);
+}
